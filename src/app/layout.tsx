@@ -9,6 +9,10 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Ganit — Learn. Play. Grow.',
   description: 'Math practice and brain training for all ages.',
+  other: {
+    'privacy-policy': '/privacy',
+    'terms-of-service': '/terms',
+  },
 };
 
 export default function RootLayout({
