@@ -1,26 +1,55 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* GanitAR design system — adapted from bestbuddai notebook palette */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Primary palette */
+  --color-ink-800: #18324A;
+  --color-ink-900: #102235;
+  --color-cream: #FFF8EE;
+  --color-cream-light: #FFFDF9;
+  --color-sand-100: #F4ECDF;
+  --color-sand-200: #E6D7C3;
+  --color-sand-400: #B9A894;
+  --color-stone-600: #73675C;
+  --color-sky: #8CCEF4;
+  --color-sun: #FFD66B;
+  --color-coral: #FF8D72;
+  --color-leaf: #73C08F;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Semantic */
+  --color-success: #58B47C;
+  --color-warning: #F0B648;
+  --color-error: #E56C67;
+  --color-info: #4AA5D9;
+
+  /* Fonts */
+  --font-display: 'Nunito', system-ui, sans-serif;
+  --font-body: system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Radius */
+  --radius-xs: 10px;
+  --radius-sm: 14px;
+  --radius-md: 20px;
+  --radius-lg: 26px;
+  --radius-pill: 999px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-cream);
+  color: var(--color-ink-800);
+  font-family: var(--font-body);
+}
+
+.page-bg {
+  background:
+    radial-gradient(circle at top left, rgba(140, 206, 244, 0.2), transparent 28%),
+    radial-gradient(circle at top right, rgba(255, 214, 107, 0.15), transparent 30%),
+    linear-gradient(180deg, #FFFDF9 0%, #FFF8EE 54%, #FDF4E6 100%);
+}
+
+.notebook-lines {
+  background-image:
+    linear-gradient(180deg, transparent 0, transparent 23px, rgba(24, 50, 74, 0.05) 24px);
+  background-size: 100% 24px;
 }
