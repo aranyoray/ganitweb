@@ -32,7 +32,8 @@ export default function Footer() {
 
         <div className="mt-8 pt-6 border-t border-sand-200 text-center">
           <p className="text-xs text-sand-400">
-            &copy; {new Date().getFullYear()} GanitAR. All rights reserved.
+            Copyright &copy; {new Date().getFullYear()} Aarav Kapoor. All rights
+            reserved.
           </p>
         </div>
       </div>
