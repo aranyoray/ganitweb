@@ -122,7 +122,11 @@ export default function SpeechDemo() {
       </div>
 
       {transcript && (
-        <div className="rounded-[var(--radius-lg)] bg-cream-light border border-sand-200 p-6 space-y-3">
+        <div
+          aria-live="polite"
+          aria-atomic="true"
+          className="rounded-[var(--radius-lg)] bg-cream-light border border-sand-200 p-6 space-y-3"
+        >
           <div>
             <span className="text-xs font-semibold text-stone-600 uppercase tracking-wide">
               You said

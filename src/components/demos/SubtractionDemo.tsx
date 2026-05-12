@@ -5,7 +5,7 @@ import { useState } from "react";
 type Phase = "idle" | "leaving" | "done";
 
 const CUBE_BASE =
-  "w-8 h-8 rounded-md shadow-[2px_3px_0_rgba(0,0,0,0.12)] transition-all duration-1000";
+  "w-8 h-8 rounded-md shadow-[2px_3px_0_rgba(0,0,0,0.12)] motion-safe:transition-all motion-safe:duration-1000";
 
 export default function SubtractionDemo() {
   const [a, setA] = useState(7);

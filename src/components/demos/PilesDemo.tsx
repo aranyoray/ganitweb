@@ -93,7 +93,7 @@ export default function PilesDemo() {
             <Pile count={a} />
           </button>
           <div
-            className={`transition-all duration-700 ${state === "combining" || state === "combined" ? "-translate-x-12 opacity-0" : "opacity-100"}`}
+            className={`motion-safe:transition-all motion-safe:duration-700 ${state === "combining" || state === "combined" ? "-translate-x-12 opacity-0" : "opacity-100"}`}
           >
             <button
               type="button"
