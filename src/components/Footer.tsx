@@ -14,7 +14,10 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="flex items-center gap-8">
+          <nav
+            aria-label="Footer navigation"
+            className="flex items-center gap-8"
+          >
             <Link
               href="/demo"
               className="text-sm text-stone-600 hover:text-ink-800 transition-colors"
@@ -33,7 +36,7 @@ export default function Footer() {
             >
               Support
             </Link>
-          </div>
+          </nav>
         </div>
 
         <div className="mt-8 pt-6 border-t border-sand-200 text-center">

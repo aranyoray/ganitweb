@@ -49,6 +49,24 @@ export async function POST(request: Request) {
       { status: 400 },
     );
   }
+  if (name.length > 200 || email.length > 320 || message.length > 10_000) {
+    return NextResponse.json(
+      { error: "Submission too large." },
+      { status: 413 },
+    );
+  }
+  if (subject && subject.length > 200) {
+    return NextResponse.json(
+      { error: "Subject too long." },
+      { status: 413 },
+    );
+  }
+
+  const cleanSubject = (subject ?? "")
+    .replace(/[\r\n]+/g, " ")
+    .trim()
+    .slice(0, 200);
+  const cleanName = name.replace(/[\r\n]+/g, " ").trim().slice(0, 200);
 
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
@@ -66,8 +84,8 @@ export async function POST(request: Request) {
     await resend.emails.send({
       from: "GanitAR Contact <onboarding@resend.dev>",
       to: "support@ganitar.app",
-      subject: `[GanitAR Support] ${subject || "No subject"}`,
-      text: `Name: ${name}\nEmail: ${email}\nSubject: ${subject || "N/A"}\n\nMessage:\n${message}`,
+      subject: `[GanitAR Support] ${cleanSubject || "No subject"}`,
+      text: `Name: ${cleanName}\nEmail: ${email}\nSubject: ${cleanSubject || "N/A"}\n\nMessage:\n${message}`,
     });
 
     return NextResponse.json({ success: true });

@@ -8,7 +8,10 @@ export default function Header() {
 
   return (
     <header className="w-full border-b border-sand-200 bg-cream-light/80 backdrop-blur-sm sticky top-0 z-50">
-      <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+      <nav
+        aria-label="Main navigation"
+        className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4"
+      >
         <Link href="/" className="flex items-center gap-2">
           <span className="text-xl font-bold font-[family-name:var(--font-display)] text-ink-800">
             GanitAR
@@ -50,6 +53,8 @@ export default function Header() {
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden p-2 text-ink-800"
           aria-label="Toggle menu"
+          aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
         >
           <svg
             width="24"
@@ -70,7 +75,10 @@ export default function Header() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden border-t border-sand-200 bg-cream-light px-6 py-4 space-y-3">
+        <div
+          id="mobile-menu"
+          className="md:hidden border-t border-sand-200 bg-cream-light px-6 py-4 space-y-3"
+        >
           <Link
             href="/demo"
             className="block text-sm font-medium text-stone-600 hover:text-ink-800"
