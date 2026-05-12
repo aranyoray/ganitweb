@@ -105,6 +105,7 @@ export default function HomePage() {
 
       {/* Value Cards */}
       <section className="mx-auto max-w-5xl px-6 py-16">
+        <h2 className="sr-only">Why GanitAR</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature) => (
             <div
@@ -170,6 +171,7 @@ export default function HomePage() {
 
       {/* For Students / For Teachers */}
       <section className="mx-auto max-w-5xl px-6 py-16">
+        <h2 className="sr-only">Who it&apos;s for</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="rounded-[var(--radius-lg)] bg-cream-light border border-sand-200 p-8">
             <h3 className="text-xl font-bold font-[family-name:var(--font-display)] text-ink-800">
