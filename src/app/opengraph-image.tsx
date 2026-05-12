@@ -55,8 +55,8 @@ export default function OpenGraphImage() {
             maxWidth: 900,
           }}
         >
-          3D math objects on your desk. Count, add, and explore geometry in
-          augmented reality. iPhone &amp; iPad. Free.
+          Tap piles to combine, scan or speak a problem, print a worksheet.
+          On-device AR math for iPhone &amp; iPad. Free.
         </div>
       </div>
     ),
