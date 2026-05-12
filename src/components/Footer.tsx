@@ -16,6 +16,12 @@ export default function Footer() {
 
           <div className="flex items-center gap-8">
             <Link
+              href="/demo"
+              className="text-sm text-stone-600 hover:text-ink-800 transition-colors"
+            >
+              Try it
+            </Link>
+            <Link
               href="/privacy"
               className="text-sm text-stone-600 hover:text-ink-800 transition-colors"
             >

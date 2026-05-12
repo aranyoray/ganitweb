@@ -318,6 +318,27 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Try it CTA */}
+      <section className="mx-auto max-w-5xl px-6 py-16 text-center">
+        <div className="rounded-[var(--radius-lg)] bg-leaf/10 border border-leaf/30 p-8 md:p-12">
+          <h2 className="text-2xl md:text-3xl font-bold font-[family-name:var(--font-display)] text-ink-800">
+            Don&apos;t have an iPhone handy?
+          </h2>
+          <p className="mt-4 text-base text-stone-600 max-w-2xl mx-auto leading-relaxed">
+            Try GanitAR in your browser. Six hands-on demos — tap-to-combine
+            piles, place-value blocks, the expression parser, voice input, and
+            the printable worksheet. AR shapes stay on iOS but the math feel
+            ports.
+          </p>
+          <a
+            href="/demo"
+            className="mt-8 inline-block rounded-[var(--radius-pill)] bg-ink-800 px-6 py-3 text-sm font-semibold text-white hover:brightness-110"
+          >
+            Open the browser demos →
+          </a>
+        </div>
+      </section>
+
       {/* Bottom CTA */}
       <section className="mx-auto max-w-5xl px-6 py-20 text-center">
         <h2 className="text-2xl md:text-3xl font-bold font-[family-name:var(--font-display)] text-ink-800">

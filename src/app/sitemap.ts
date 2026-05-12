@@ -5,6 +5,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   return [
     { url: `${base}/`, lastModified: now, changeFrequency: "monthly", priority: 1 },
+    { url: `${base}/demo`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/demo/piles`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/demo/place-value`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/demo/subtraction`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/demo/parser`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/demo/speech`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/demo/worksheet`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/support`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/privacy`, lastModified: now, changeFrequency: "yearly", priority: 0.4 },
   ];
