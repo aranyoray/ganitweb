@@ -55,10 +55,9 @@ function Column({
 
 export default function PlaceValueDemo() {
   const [n, setN] = useState(142);
-  const safeN = Math.max(0, Math.min(999, n));
-  const hundreds = Math.floor(safeN / 100);
-  const tens = Math.floor((safeN % 100) / 10);
-  const units = safeN % 10;
+  const hundreds = Math.floor(n / 100);
+  const tens = Math.floor((n % 100) / 10);
+  const units = n % 10;
 
   return (
     <div className="space-y-8">
@@ -70,7 +69,10 @@ export default function PlaceValueDemo() {
             min={0}
             max={999}
             value={n}
-            onChange={(e) => setN(Number(e.target.value) || 0)}
+            onChange={(e) => {
+              const raw = Number(e.target.value) || 0;
+              setN(Math.max(0, Math.min(999, raw)));
+            }}
             className="w-24 rounded-[var(--radius-sm)] border border-sand-200 px-3 py-2 text-lg font-bold text-ink-800"
           />
           <span className="text-sm text-stone-600">
@@ -80,7 +82,7 @@ export default function PlaceValueDemo() {
       </div>
 
       <div className="rounded-[var(--radius-lg)] bg-cream-light border border-sand-200 p-8 min-h-[200px]">
-        {safeN === 0 ? (
+        {n === 0 ? (
           <div className="text-center text-stone-600">
             Zero — nothing in any column.
             <div className="mt-4 mx-auto w-fit">
