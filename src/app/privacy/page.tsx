@@ -41,8 +41,16 @@ export default function PrivacyPage() {
                 <li>
                   <strong className="text-ink-800">Camera frames</strong> —
                   processed in real time by Apple&apos;s ARKit framework for
-                  plane detection and scene anchoring. Frames are not saved,
-                  recorded, or transmitted.
+                  plane detection and scene anchoring, and by Apple&apos;s
+                  on-device DataScanner for recognizing printed math problems.
+                  Frames are not saved, recorded, or transmitted.
+                </li>
+                <li>
+                  <strong className="text-ink-800">Microphone audio</strong> —
+                  when you use voice input to dictate a problem, audio is
+                  transcribed by Apple&apos;s Speech framework with on-device
+                  recognition enabled. Audio is not saved, recorded, or sent
+                  to Apple or any other server.
                 </li>
                 <li>
                   <strong className="text-ink-800">Your typed answers</strong> —
@@ -133,7 +141,9 @@ export default function PrivacyPage() {
                 On first launch, iOS will ask for permission to use the camera.
                 The camera is required because GanitAR is an augmented reality
                 app — without the camera feed, ARKit cannot place virtual
-                objects on real surfaces.
+                objects on real surfaces. The camera is also used to scan
+                printed math problems through Apple&apos;s on-device
+                DataScanner.
               </p>
               <p>
                 Camera frames are processed entirely on-device. They are not
@@ -147,7 +157,30 @@ export default function PrivacyPage() {
           {/* 6 */}
           <section>
             <h2 className="text-xl font-bold font-[family-name:var(--font-display)] text-ink-800">
-              6. Children&apos;s Privacy
+              6. Microphone and Speech Recognition Permission
+            </h2>
+            <div className="mt-4 space-y-3 text-base leading-relaxed text-stone-600">
+              <p>
+                If you use the voice-input mode to dictate a math problem, iOS
+                will ask for permission to use the microphone and to perform
+                speech recognition. Both are optional — the rest of the app
+                works without them.
+              </p>
+              <p>
+                Speech recognition runs on-device using Apple&apos;s Speech
+                framework with the on-device recognition flag set. Audio
+                samples and transcripts are processed in memory and are not
+                sent to Apple, not sent to us, and not written to disk. You
+                can revoke either permission at any time through iOS Settings
+                → GanitAR.
+              </p>
+            </div>
+          </section>
+
+          {/* 7 */}
+          <section>
+            <h2 className="text-xl font-bold font-[family-name:var(--font-display)] text-ink-800">
+              7. Children&apos;s Privacy
             </h2>
             <div className="mt-4 space-y-3 text-base leading-relaxed text-stone-600">
               <p>
@@ -161,10 +194,10 @@ export default function PrivacyPage() {
             </div>
           </section>
 
-          {/* 7 */}
+          {/* 8 */}
           <section>
             <h2 className="text-xl font-bold font-[family-name:var(--font-display)] text-ink-800">
-              7. Data Retention and Deletion
+              8. Data Retention and Deletion
             </h2>
             <div className="mt-4 space-y-3 text-base leading-relaxed text-stone-600">
               <p>
@@ -175,10 +208,10 @@ export default function PrivacyPage() {
             </div>
           </section>
 
-          {/* 8 */}
+          {/* 9 */}
           <section>
             <h2 className="text-xl font-bold font-[family-name:var(--font-display)] text-ink-800">
-              8. Contact Us
+              9. Contact Us
             </h2>
             <div className="mt-4 space-y-3 text-base leading-relaxed text-stone-600">
               <p>
@@ -201,10 +234,10 @@ export default function PrivacyPage() {
             </div>
           </section>
 
-          {/* 9 */}
+          {/* 10 */}
           <section>
             <h2 className="text-xl font-bold font-[family-name:var(--font-display)] text-ink-800">
-              9. Changes to This Policy
+              10. Changes to This Policy
             </h2>
             <div className="mt-4 space-y-3 text-base leading-relaxed text-stone-600">
               <p>

@@ -8,16 +8,23 @@ const features = [
   },
   {
     icon: "🧮",
-    title: "Count and add by sight",
+    title: "Count, add, subtract, regroup",
     description:
-      "Counting, addition, and grouping become physical. Move shapes, rearrange them, and feel the math instead of memorizing it.",
+      "Addition and subtraction with movable shapes. Place-value blocks for hundreds, tens, and units. Feel the math instead of memorizing it.",
     color: "bg-sun/15 border-sun/30",
+  },
+  {
+    icon: "📸",
+    title: "Scan or speak a problem",
+    description:
+      "Point the camera at a printed math problem, or say it out loud — both the OCR and the speech recognition stay on device.",
+    color: "bg-coral/15 border-coral/30",
   },
   {
     icon: "🛡️",
     title: "On-device, no accounts",
     description:
-      "Nothing is uploaded. No sign-up, no tracking, no ads. The camera is used only for AR rendering, never recorded.",
+      "Nothing is uploaded. No sign-up, no tracking, no ads. Camera and microphone are used only on-device, never recorded.",
     color: "bg-leaf/15 border-leaf/30",
   },
 ];
@@ -32,7 +39,7 @@ const steps = [
   {
     number: "2",
     title: "Point",
-    description: "Aim the device at a flat surface, like a desk or floor",
+    description: "Aim at a flat surface for AR shapes — or at a printed problem to scan it",
     color: "bg-sun",
   },
   {
@@ -51,7 +58,8 @@ const steps = [
 
 const trustItems = [
   "Camera feed is processed only on-device by Apple's ARKit framework",
-  "No images, video, or sensor data ever leave your device",
+  "Printed-problem scanning and voice input run fully on-device — no audio or images leave the phone",
+  "No images, video, audio, or sensor data ever leave your device",
   "No accounts, no sign-in, no email required",
   "No third-party analytics, no advertising SDKs, no tracking pixels",
   "Works offline once installed — no network calls during use",
@@ -157,7 +165,10 @@ export default function HomePage() {
             <ul className="mt-4 space-y-2">
               {[
                 "Counting and grouping in 3D",
-                "Addition with movable shapes",
+                "Addition and subtraction with movable shapes",
+                "Place-value blocks for hundreds, tens, and units",
+                "Scan a printed problem or say it out loud",
+                "Print a practice worksheet from your phone",
                 "Geometry you can orbit",
                 "No login, no streaks, no pressure",
                 "Self-paced — never timed",

@@ -26,12 +26,37 @@ const faqs = [
   {
     question: "Does GanitAR collect any data about me or my child?",
     answer:
-      "No. There are no accounts, no analytics, no advertising, and no network calls. The camera is used only for AR rendering and the feed never leaves the device. See the Privacy Policy for details.",
+      "No. There are no accounts, no analytics, no advertising, and no network calls. The camera, microphone, and speech recognition are all used only on-device — nothing leaves the phone. See the Privacy Policy for details.",
+  },
+  {
+    question: "Can I scan a printed math problem with the camera?",
+    answer:
+      "Yes. Open Virtual mode and choose Scan. Aim the camera at a printed problem like \"4 + 3\" and GanitAR will read it using Apple's on-device DataScanner and render the shapes in AR. Requires iPhone XS or newer.",
+  },
+  {
+    question: "Can I just say the problem out loud?",
+    answer:
+      "Yes. Open Virtual mode and choose Speak. Say something like \"five plus three\" and the app will transcribe it using Apple's on-device Speech framework and render it in AR. Microphone permission is required and the audio never leaves the device.",
+  },
+  {
+    question: "What about subtraction or larger numbers like 142 + 36?",
+    answer:
+      "Subtraction is supported — the shapes representing the difference leave the scene. For numbers above 20, GanitAR automatically switches to place-value mode and renders Dienes base-10 blocks (flats for hundreds, rods for tens, units for ones).",
+  },
+  {
+    question: "Can I print a practice worksheet?",
+    answer:
+      "Yes. Virtual mode includes a Worksheet option that generates a printable PDF of practice problems and opens the system share sheet, so you can print or AirDrop it.",
   },
   {
     question: "The shapes won't appear when I point at the table — what do I do?",
     answer:
       "AR needs a flat, well-lit surface with some visual texture. Make sure the room is bright, the surface is not pure-white or glossy, and slowly move the device side-to-side so ARKit can detect the plane. A short pause usually fixes it.",
+  },
+  {
+    question: "Scan mode says it isn't supported on my device.",
+    answer:
+      "The printed-problem scanner uses Apple's DataScanner, which requires an iPhone XS or newer (A12 Bionic with the Neural Engine). The rest of GanitAR — AR shapes, voice input, worksheet, all games — runs on every ARKit-capable device.",
   },
   {
     question: "Can teachers use this in class?",
