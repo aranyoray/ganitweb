@@ -1,23 +1,22 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { generateWorksheet } from "@/lib/worksheet";
 
 export default function WorksheetDemo() {
-  const [url, setUrl] = useState<string | null>(null);
   const [seed, setSeed] = useState(0);
 
-  useEffect(() => {
+  const url = useMemo(() => {
+    void seed;
+    if (typeof window === "undefined") return null;
     const blob = generateWorksheet();
-    const next = URL.createObjectURL(blob);
-    setUrl((prev) => {
-      if (prev) URL.revokeObjectURL(prev);
-      return next;
-    });
-    return () => {
-      URL.revokeObjectURL(next);
-    };
+    return URL.createObjectURL(blob);
   }, [seed]);
+
+  useEffect(() => {
+    if (!url) return;
+    return () => URL.revokeObjectURL(url);
+  }, [url]);
 
   return (
     <div className="space-y-8">

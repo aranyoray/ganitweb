@@ -39,10 +39,6 @@ export default function SpeechDemo() {
   const recognitionRef = useRef<SpeechRecognitionLike | null>(null);
 
   useEffect(() => {
-    if (getSpeechCtor() === null) setPhase("unsupported");
-  }, []);
-
-  useEffect(() => {
     return () => {
       recognitionRef.current?.stop();
     };
