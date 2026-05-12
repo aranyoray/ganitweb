@@ -14,7 +14,7 @@ export default function PrivacyPage() {
           Privacy Policy
         </h1>
         <p className="mt-3 text-sm text-stone-600">
-          Last updated: April 27, 2026
+          Last updated: May 12, 2026
         </p>
 
         <div className="mt-8 rounded-[var(--radius-md)] bg-cream-light border border-sand-200 p-6">
