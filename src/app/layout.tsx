@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s | GanitAR",
   },
   description:
-    "GanitAR is an iPhone and iPad app that drops 3D math objects into your space. Count, add, and explore geometry in augmented reality. No accounts. No tracking.",
+    "GanitAR is an iPhone and iPad app that drops 3D math objects into your space. Tap piles to add, scan or say a problem, print a practice worksheet — all on-device. No accounts. No tracking.",
   metadataBase: new URL("https://ganitar.vercel.app"),
   openGraph: {
     type: "website",
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     siteName: "GanitAR",
     title: "GanitAR — Math you can walk around",
     description:
-      "Drop 3D shapes onto your desk. Walk around them. Count, add, explore. AR math for iPhone and iPad.",
+      "Drop 3D shapes onto your desk. Tap piles to combine, scan or speak a problem, print a worksheet. AR math for iPhone and iPad.",
   },
   twitter: {
     card: "summary_large_image",
     title: "GanitAR — Math you can walk around",
     description:
-      "Drop 3D shapes onto your desk. Walk around them. AR math for iPhone and iPad.",
+      "Drop 3D shapes onto your desk. Tap piles to combine, scan or speak a problem. AR math for iPhone and iPad.",
   },
   robots: {
     index: true,

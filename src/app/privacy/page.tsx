@@ -81,10 +81,16 @@ export default function PrivacyPage() {
               <p>Everything. The app has no storage requirements:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>No accounts are created.</li>
-                <li>No user files are written to disk.</li>
+                <li>No persistent user files are written to disk.</li>
                 <li>No Keychain entries are added.</li>
                 <li>No background processes run when the app is closed.</li>
               </ul>
+              <p>
+                When you generate a practice worksheet, the PDF is written to
+                the app&apos;s sandboxed temporary directory only so the system
+                share sheet can hand it to Print, Files, or AirDrop. iOS clears
+                that directory automatically. Nothing is uploaded.
+              </p>
               <p>
                 When you close the app, in-memory state is discarded. When you
                 uninstall the app, no residual user data exists to remove.

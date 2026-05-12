@@ -8,9 +8,9 @@ const features = [
   },
   {
     icon: "🧮",
-    title: "Count, add, subtract, regroup",
+    title: "Tap two piles to combine them",
     description:
-      "Addition and subtraction with movable shapes. Place-value blocks for hundreds, tens, and units. Feel the math instead of memorizing it.",
+      "Addition and subtraction with movable shapes. Tap one pile to send it flying into the other and watch a + b become the sum. Place-value blocks kick in for hundreds, tens, and units.",
     color: "bg-sun/15 border-sun/30",
   },
   {
@@ -38,20 +38,20 @@ const steps = [
   },
   {
     number: "2",
-    title: "Point",
-    description: "Aim at a flat surface for AR shapes — or at a printed problem to scan it",
+    title: "Pick a mode",
+    description: "Real mode for guided practice games, or Virtual mode to scan, speak, or print a problem",
     color: "bg-sun",
   },
   {
     number: "3",
     title: "Place",
-    description: "Tap to drop 3D shapes into your space",
+    description: "Tap to drop 3D shapes into your space, then tap a pile to combine it with another",
     color: "bg-coral",
   },
   {
     number: "4",
     title: "Solve",
-    description: "Answer the prompt and advance to the next round",
+    description: "Answer the prompt and advance — the app says \"Try again\" if a digit slips",
     color: "bg-leaf",
   },
 ];
@@ -185,7 +185,8 @@ export default function HomePage() {
             <ul className="mt-4 space-y-2">
               {[
                 "Counting and grouping in 3D",
-                "Addition and subtraction with movable shapes",
+                "Tap-to-combine piles for addition",
+                "Subtraction in color — blue cubes stay, red cubes leave",
                 "Place-value blocks for hundreds, tens, and units",
                 "Scan a printed problem or say it out loud",
                 "Print a practice worksheet from your phone",
@@ -229,6 +230,78 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* What's Inside */}
+      <section className="mx-auto max-w-5xl px-6 py-16">
+        <h2 className="text-2xl md:text-3xl font-bold font-[family-name:var(--font-display)] text-ink-800 text-center">
+          What&apos;s inside
+        </h2>
+        <p className="mt-3 text-center text-base text-stone-600 max-w-2xl mx-auto">
+          Two modes. Pick the one that matches the moment.
+        </p>
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Real mode */}
+          <div className="rounded-[var(--radius-lg)] bg-sky/10 border border-sky/30 p-8">
+            <span className="inline-block rounded-full bg-sky/20 px-3 py-1 text-xs font-semibold text-sky">
+              Real mode
+            </span>
+            <h3 className="mt-4 text-xl font-bold font-[family-name:var(--font-display)] text-ink-800">
+              Four guided practice games
+            </h3>
+            <p className="mt-3 text-sm text-stone-600 leading-relaxed">
+              Hand the iPad over and let the app pick the problem. Four games,
+              each focused on one habit of mind.
+            </p>
+            <ul className="mt-4 space-y-2">
+              {[
+                "Count the shapes — read off how many appear on the desk",
+                "Add two piles together — tap-to-combine, see the sum",
+                "Level pack (3 levels) — progressively harder mixes",
+                "Count the boxes — quick visual subitizing",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-2 text-sm text-stone-600"
+                >
+                  <span className="text-sky">•</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Virtual mode */}
+          <div className="rounded-[var(--radius-lg)] bg-coral/10 border border-coral/30 p-8">
+            <span className="inline-block rounded-full bg-coral/20 px-3 py-1 text-xs font-semibold text-coral">
+              Virtual mode
+            </span>
+            <h3 className="mt-4 text-xl font-bold font-[family-name:var(--font-display)] text-ink-800">
+              Bring your own problem
+            </h3>
+            <p className="mt-3 text-sm text-stone-600 leading-relaxed">
+              Three paths in, one shared AR scene out. Every step runs
+              on-device.
+            </p>
+            <ul className="mt-4 space-y-2">
+              {[
+                "Scan a printed problem — Apple DataScanner (iPhone XS+)",
+                "Say it out loud — \"twenty plus seven\" parses to 20 + 7",
+                "Generate a practice worksheet PDF — AirPrint or share",
+                "Auto place-value when any number is over 20",
+                "Three retries on a misread, then it suggests printing a sheet",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-2 text-sm text-stone-600"
+                >
+                  <span className="text-coral">•</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* AR Highlight */}
       <section className="mx-auto max-w-5xl px-6 py-16">
         <div className="rounded-[var(--radius-lg)] bg-sun/10 border border-sun/30 p-8 md:p-12 text-center">
@@ -238,7 +311,9 @@ export default function HomePage() {
           <p className="mt-4 text-base text-stone-600 max-w-2xl mx-auto leading-relaxed">
             GanitAR is built on Apple&apos;s ARKit and RealityKit. Shapes anchor
             to real surfaces, hold their place as you move, and respond to your
-            taps. When you can move around an idea, you understand it.
+            taps. When you can move around an idea, you understand it. The app
+            icon adapts to iOS Light, Dark, and Tinted appearance so the home
+            screen always looks right.
           </p>
         </div>
       </section>

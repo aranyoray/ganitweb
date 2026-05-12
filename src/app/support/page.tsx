@@ -14,6 +14,21 @@ const faqs = [
       "GanitAR is an iPhone and iPad app that drops 3D math objects into your space using augmented reality. You count, add, and explore geometry by walking around real shapes anchored on your desk or floor.",
   },
   {
+    question: "What's the difference between Real mode and Virtual mode?",
+    answer:
+      "Real mode is the guided practice path — pick from four progressively harder games and the app gives you problems to solve with AR shapes. Virtual mode is the open-ended path — bring your own problem by scanning printed worksheets, saying the problem out loud, or generating a fresh practice sheet to print.",
+  },
+  {
+    question: "How does addition work — do I drag the shapes together?",
+    answer:
+      "Tap. Two piles appear in your space; tap one pile and it flies into the other, then the caption reads \"a + b = sum\". Tap-to-combine is faster on small devices than dragging in 3D and works the same on iPhone and iPad.",
+  },
+  {
+    question: "What do the colors mean in subtraction?",
+    answer:
+      "Blue cubes are the ones that stay; red cubes are the ones leaving the scene. Watching the red cubes fade away makes \"take away\" something you can see instead of just read.",
+  },
+  {
     question: "What devices does it run on?",
     answer:
       "Any iPhone or iPad with an A12 Bionic chip or newer, running iOS 17 or later. ARKit support is required, which covers most devices from 2018 onward.",
@@ -36,7 +51,12 @@ const faqs = [
   {
     question: "Can I just say the problem out loud?",
     answer:
-      "Yes. Open Virtual mode and choose Speak. Say something like \"five plus three\" and the app will transcribe it using Apple's on-device Speech framework and render it in AR. Microphone permission is required and the audio never leaves the device.",
+      "Yes. Open Virtual mode and choose Speak. Say something like \"five plus three\" or \"twenty plus seven\" — number words from zero to ninety-nine are handled, plus synonyms like \"add\", \"take away\", and \"minus\". Audio runs through Apple's on-device Speech framework and never leaves the phone. A live transcript appears while you speak; Stop and Cancel are always one tap away.",
+  },
+  {
+    question: "What kinds of problems does Virtual mode accept?",
+    answer:
+      "One addition or subtraction expression with whole numbers (X + Y or X − Y, each 0 to 99), or a single integer 0 to 999. Negative results are rejected with a friendly hint, as are multi-term expressions like \"2 + 3 + 4\". After three misreads in a row, the app suggests printing a worksheet so the scan reads cleanly next time.",
   },
   {
     question: "What about subtraction or larger numbers like 142 + 36?",
@@ -46,7 +66,17 @@ const faqs = [
   {
     question: "Can I print a practice worksheet?",
     answer:
-      "Yes. Virtual mode includes a Worksheet option that generates a printable PDF of practice problems and opens the system share sheet, so you can print or AirDrop it.",
+      "Yes. Virtual mode includes a Worksheet option that generates a US-Letter PDF with twelve problems in a 3-by-4 grid, large bold digits sized for clean OCR pickup, and a header and footer. The system share sheet opens so you can AirPrint, AirDrop, save to Files, or hand it off.",
+  },
+  {
+    question: "Does the app give feedback when I get an answer wrong?",
+    answer:
+      "Yes. Type a wrong digit and a red \"Try again\" hint appears next to the input. Correct answers show \"Correct!\" and an Advance button. The number pad keyboard pops up automatically so kids never have to hunt for the digits.",
+  },
+  {
+    question: "How does the home screen icon look on iOS 18?",
+    answer:
+      "The app ships three icon variants — Light, Dark, and Tinted — so iOS picks the one that matches the current appearance. Tap-to-customize on the home screen will recolor the icon using the Tinted variant instead of falling back to the generic dimmed look.",
   },
   {
     question: "The shapes won't appear when I point at the table — what do I do?",
