@@ -80,7 +80,25 @@ export default function HomePage() {
           rearrange them, and explore geometry from every angle — right through
           your iPhone or iPad.
         </p>
-        <div className="mt-10 flex items-center justify-center" id="download">
+        <div className="mt-10 flex flex-col items-center justify-center gap-3 scroll-mt-24" id="download">
+          <a
+            href="https://apps.apple.com/in/app/ganitar/id676397412"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 rounded-[var(--radius-pill)] bg-ink-800 px-6 py-3 text-white hover:brightness-110 transition-all"
+            aria-label="Download GanitAR on the App Store"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path d="M17.05 12.04c-.03-2.6 2.13-3.86 2.22-3.92-1.21-1.77-3.1-2.01-3.77-2.04-1.6-.16-3.13.94-3.94.94-.82 0-2.07-.92-3.41-.89-1.75.03-3.37 1.02-4.27 2.59-1.83 3.17-.47 7.87 1.31 10.45.87 1.26 1.91 2.68 3.26 2.63 1.31-.05 1.8-.85 3.39-.85 1.58 0 2.03.85 3.41.82 1.41-.03 2.3-1.29 3.17-2.55 1-1.47 1.41-2.89 1.43-2.96-.03-.01-2.75-1.06-2.78-4.22zM14.5 4.42c.72-.87 1.21-2.08 1.08-3.29-1.04.04-2.3.69-3.04 1.56-.66.77-1.25 2-1.09 3.18 1.16.09 2.34-.59 3.05-1.45z" />
+            </svg>
+            <span className="text-sm font-semibold">Download on the App Store</span>
+          </a>
           <p className="text-sm text-sand-400">Free on iOS &amp; iPadOS</p>
         </div>
       </section>

@@ -30,7 +30,9 @@ export default function Header() {
             Support
           </Link>
           <a
-            href="#download"
+            href="https://apps.apple.com/in/app/ganitar/id676397412"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-[var(--radius-pill)] bg-coral px-5 py-2.5 text-sm font-semibold text-white hover:brightness-105 transition-all"
           >
             Download
@@ -78,7 +80,9 @@ export default function Header() {
             Support
           </Link>
           <a
-            href="#download"
+            href="https://apps.apple.com/in/app/ganitar/id676397412"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block rounded-[var(--radius-pill)] bg-coral px-5 py-2.5 text-sm font-semibold text-white"
             onClick={() => setMenuOpen(false)}
           >
