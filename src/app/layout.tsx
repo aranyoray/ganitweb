@@ -25,14 +25,12 @@ export const metadata: Metadata = {
     title: "GanitAR — Math you can walk around",
     description:
       "Drop 3D shapes onto your desk. Walk around them. Count, add, explore. AR math for iPhone and iPad.",
-    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "GanitAR — Math you can walk around",
     description:
       "Drop 3D shapes onto your desk. Walk around them. AR math for iPhone and iPad.",
-    images: ["/og-image.png"],
   },
   robots: {
     index: true,
