@@ -9,6 +9,13 @@ export const metadata: Metadata = {
 
 const demos = [
   {
+    href: "/demo/room",
+    title: "3D Room mode ✦ new",
+    blurb:
+      "A tiny virtual classroom — drag to orbit, pinch to zoom, tap a pile to combine. No AR device needed.",
+    color: "bg-coral/15 border-coral/40",
+  },
+  {
     href: "/demo/piles",
     title: "Tap-to-combine piles",
     blurb:
