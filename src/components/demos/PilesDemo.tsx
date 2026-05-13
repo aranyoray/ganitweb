@@ -90,10 +90,11 @@ export default function PilesDemo() {
             aria-label="Tap pile A to combine"
             className="focus:outline-none focus:ring-2 focus:ring-coral rounded-[var(--radius-md)] disabled:opacity-60"
           >
-            <Pile count={a} />
+            <Pile count={state === "combined" ? a + b : a} />
           </button>
           <div
             className={`motion-safe:transition-all motion-safe:duration-700 ${state === "combining" || state === "combined" ? "-translate-x-12 opacity-0" : "opacity-100"}`}
+            aria-hidden={state === "combined"}
           >
             <button
               type="button"
