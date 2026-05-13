@@ -76,7 +76,9 @@ export default function PlaceValueDemo() {
             className="w-24 rounded-[var(--radius-sm)] border border-sand-200 px-3 py-2 text-lg font-bold text-ink-800"
           />
           <span className="text-sm text-stone-600">
-            = {hundreds} hundred + {tens} ten + {units} one
+            = {hundreds} {hundreds === 1 ? "hundred" : "hundreds"} +{" "}
+            {tens} {tens === 1 ? "ten" : "tens"} +{" "}
+            {units} {units === 1 ? "one" : "ones"}
           </span>
         </label>
       </div>
